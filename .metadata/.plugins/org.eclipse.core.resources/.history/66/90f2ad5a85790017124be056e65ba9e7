@@ -1,0 +1,86 @@
+package com.bellinfo.flights.dao.bills;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class CarBills {
+private String name;
+@Id
+@GeneratedValue
+private String card; 
+private String phone; 
+private String mm; 
+private String yy;
+private String cvv; 
+private String amount;
+
+
+
+public CarBills(){
+	
+	
+	
+}
+
+public CarBills(String name, String card, String phone, String mm, String yy,
+		String cvv, String amount) {
+	super();
+	this.name = name;
+	this.card = card;
+	this.phone = phone;
+	this.mm = mm;
+	this.yy = yy;
+	this.cvv = cvv;
+	this.amount = amount;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getCard() {
+	return card;
+}
+public void setCard(String card) {
+	this.card = card;
+}
+public String getPhone() {
+	return phone;
+}
+public void setPhone(String phone) {
+	this.phone = phone;
+}
+public String getMm() {
+	return mm;
+}
+public void setMm(String mm) {
+	this.mm = mm;
+}
+public String getYy() {
+	return yy;
+}
+public void setYy(String yy) {
+	this.yy = yy;
+}
+public String getCvv() {
+	return cvv;
+}
+public void setCvv(String cvv) {
+	this.cvv = cvv;
+}
+public String getAmount() {
+	return amount;
+}
+public void setAmount(String amount) {
+	this.amount = amount;
+}
+@Override
+public String toString() {
+	return "CarBills [name=" + name + ", card=" + card + ", phone=" + phone
+			+ ", mm=" + mm + ", yy=" + yy + ", cvv=" + cvv + ", amount="
+			+ amount + "]";
+}
+}

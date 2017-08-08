@@ -1,0 +1,20 @@
+package com.bellinfo.flights.dao.bills;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class FlightBillsSave {
+	public void save(CarBills cb){
+		Configuration cfg = new Configuration().configure().addAnnotatedClass(FlightBills.class);
+	    SessionFactory sf = cfg.buildSessionFactory();
+	    Session session = sf.openSession();
+	    Transaction transaction = session.beginTransaction();
+	    
+	    session.save(cb);
+	    transaction.commit();
+	    session.close();
+		
+	}
+}

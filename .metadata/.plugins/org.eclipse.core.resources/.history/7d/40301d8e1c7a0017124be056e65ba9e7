@@ -1,0 +1,27 @@
+package com.bellinfo.flights.dao.bills;
+
+import javax.persistence.Id;
+
+import com.bellinfo.flights.model.FlightDetails;
+
+public class FlightBills {
+	private CarBills cb;
+	private FlightDetails fd;
+	public CarBills getCb() {
+		return cb;
+	}
+	public void setCb(CarBills cb) {
+		this.cb = cb;
+	}
+	public FlightDetails getFd() {
+		return fd;
+	}
+	public void setFd(FlightDetails fd) {
+		this.fd = fd;
+	}
+	public FlightBills() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

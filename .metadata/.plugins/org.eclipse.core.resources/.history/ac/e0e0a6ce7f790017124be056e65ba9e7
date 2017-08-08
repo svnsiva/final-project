@@ -1,0 +1,48 @@
+package com.bellinfo.flights.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.bellinfo.flights.dao.cars.Car;
+import com.bellinfo.flights.dao.cars.CarTest;
+
+@Controller
+public class CarController {
+	public static List list2;
+	@RequestMapping(value="/cars",method=RequestMethod.GET)
+	public String postStudentData(Model model){
+		CarTest ct = new CarTest();
+		//ct.enteringCarData();
+		List list = ct.gettingCarData();
+		list2=list;
+		//System.out.println(list.size());
+		/*for(int i=0;i<list.size();i++)
+			System.out.println(list.get(i).toString());*/
+		model.addAttribute("car1",list.get(0));
+		model.addAttribute("car2",list.get(1));
+		model.addAttribute("car3",list.get(2));
+		model.addAttribute("car4",list.get(3));
+		return "car-results";
+	}
+	
+	@RequestMapping(value="/car-book", method=RequestMethod.POST)
+	public String carReceving(@RequestParam String car, Model model){
+		Car cr = null;
+		if(car.equals("car1"))
+			cr=(Car) list2.get(0);
+		else if(car.equals("car2"))
+			cr=(Car) list2.get(1);
+		else if(car.equals("car13"))
+			cr=(Car) list2.get(2);
+		else 
+			cr=(Car) list2.get(3);
+		model.addAttribute("cost", cr.getCost());
+		model.addAttribute("reason", "Car Reservation");
+		return "payment";
+	}
+}

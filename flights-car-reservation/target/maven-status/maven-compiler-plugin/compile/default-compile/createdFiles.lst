@@ -1,0 +1,13 @@
+com\bellinfo\flights\controller\LandingPageController.class
+com\bellinfo\flights\controller\LoginController.class
+com\bellinfo\flights\controller\SearchController.class
+com\bellinfo\flights\init\AppConfig.class
+com\bellinfo\flights\model\FlightDetails.class
+com\bellinfo\flights\init\Initialize.class
+com\bellinfo\flights\dao\cars\Car.class
+com\bellinfo\flights\dao\flights\Flight.class
+com\bellinfo\flights\dao\flights\AccountDetails.class
+com\bellinfo\flights\controller\ContactController.class
+com\bellinfo\flights\dao\cars\CarTest.class
+com\bellinfo\flights\model\FlightSearch.class
+com\bellinfo\flights\controller\AccountController.class

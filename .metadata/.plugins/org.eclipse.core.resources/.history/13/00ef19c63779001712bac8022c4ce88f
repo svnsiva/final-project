@@ -1,0 +1,11 @@
+package com.bellinfo.flights.model;
+
+public class AirportLocations {
+	public String search(String code){
+		String location=null;
+		
+		
+		
+		return location;
+	}
+}

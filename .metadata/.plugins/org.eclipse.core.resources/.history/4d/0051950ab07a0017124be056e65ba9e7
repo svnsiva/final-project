@@ -1,0 +1,13 @@
+package com.svnsiva.hibernatepractise;
+
+
+public class AssociationTest {
+	public static void main(String[] args) {
+		Parts part1 = new Parts();
+			part1.s
+		Parts part2 = new Parts();
+		Parts part3 = new Parts();
+			
+	}
+
+}

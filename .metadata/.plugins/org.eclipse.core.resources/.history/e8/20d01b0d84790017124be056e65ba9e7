@@ -1,0 +1,23 @@
+package com.bellinfo.flights.dao.bills;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+
+
+public class CarBills {
+private String cardName;
+@Id
+@GeneratedValue
+private String cardNumber; 
+private String phoneNumber; 
+private String expDate; 
+private String cvv; 
+private String amount; 
+
+	
+	
+	
+	
+}

@@ -1,0 +1,46 @@
+package com.bellinfo.flights.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bellinfo.flights.dao.bills.GettingBillsData;
+import com.bellinfo.flights.dao.cars.Car;
+import com.bellinfo.flights.dao.flights.AccountDetails;
+
+@Controller
+public class BillsController {
+	
+	@RequestMapping(value="/carbills",method=RequestMethod.GET)
+	public String postStudentData2(Model model){
+		GettingBillsData gbd = new GettingBillsData();
+		AccountDetails ad= gbd.data();
+		for(int i=0;i<ad.getCb().size();i++){
+			ad.getCb().get(i).setCard(ad.getCb().get(i).getCard().substring(ad.getCb().get(i).getCard().length()-4, ad.getCb().get(i).getCard().length()));
+		}
+		model.addAttribute("car", ad.getCb());
+		model.addAttribute("ad", ad);
+		List<Car> send = new ArrayList<Car>();
+		List<Car> cr=CarController.list2;
+		for(int j=0;j<ad.getCb().size();j++){
+			for(int i=0;i<cr.size();i++){
+				String amount = Double.toString(cr.get(i).getCost());
+				if(ad.getCb().get(j).getAmount().contains(amount)){
+					send.add(cr.get(i));
+				}
+					
+			}
+		}
+		return "carbills";
+	}
+	@RequestMapping(value="/flightbills",method=RequestMethod.GET)
+	public String postStudentData(Model model){
+		GettingBillsData gbd = new GettingBillsData();
+		model.addAttribute("flight", gbd.data());
+		return "flightbills";
+	}
+}

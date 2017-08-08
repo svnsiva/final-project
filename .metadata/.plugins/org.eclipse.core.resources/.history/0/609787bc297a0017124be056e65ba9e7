@@ -1,0 +1,25 @@
+package com.bellinfo.flights.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bellinfo.flights.dao.bills.GettingBillsData;
+
+@Controller
+public class BillsController {
+	
+	@RequestMapping(value="/carbills",method=RequestMethod.GET)
+	public String postStudentData2(Model model){
+		GettingBillsData gbd = new GettingBillsData();
+		model.addAttribute("car", gbd.data().getCb());
+		return "carbills";
+	}
+	@RequestMapping(value="/flightbills",method=RequestMethod.GET)
+	public String postStudentData(Model model){
+		GettingBillsData gbd = new GettingBillsData();
+		model.addAttribute("flight", gbd.data().getFb());
+		return "flightbills";
+	}
+}

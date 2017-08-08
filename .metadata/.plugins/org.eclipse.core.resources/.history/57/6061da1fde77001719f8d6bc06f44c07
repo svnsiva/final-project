@@ -1,0 +1,32 @@
+package com.bellinfo.flights.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bellinfo.flights.dao.flights.AccountDetails;
+
+@Controller
+public class SearchController {
+	@RequestMapping(method=RequestMethod.GET)
+	public String studentdata(Model model){
+		AccountDetails account = new AccountDetails();
+		model.addAttribute("student",account);
+		
+		return "register";
+	}
+	
+	@RequestMapping(method=RequestMethod.POST)
+	public String postStudentData(@ModelAttribute AccountDetails account, BindingResult result, Model model){
+		System.out.println("hello");
+		if(result.hasErrors()){
+			return "register";
+		}
+		account.toString();
+		model.addAttribute("message12", "hey welcome to success page");
+		return "success";
+	}
+}

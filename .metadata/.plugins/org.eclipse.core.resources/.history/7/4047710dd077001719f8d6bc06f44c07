@@ -1,0 +1,19 @@
+package com.bellinfo.flights.dao.flights;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class AccountDetails {
+	@Id
+	private int id;
+	private String firstname;
+	private String lastName;
+	private int age;
+	private String email;
+	private String username;
+	private String password;
+	private String gender;
+	
+	
+}

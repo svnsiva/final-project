@@ -1,0 +1,17 @@
+package com.bellinfo.flights.dao.cars;
+
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class CarTest {
+	Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+    SessionFactory sf = cfg.buildSessionFactory();
+    Session session = sf.openSession();
+    Transaction transaction = session.beginTransaction();
+    
+    
+    Integer id1 = (Integer)session.save(mp1);
+}

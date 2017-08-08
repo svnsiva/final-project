@@ -1,0 +1,15 @@
+package com.bellinfo.flights.dao.bills;
+
+import javax.persistence.Id;
+
+public class FlightBills {
+	private String name;
+	@Id
+	private String card; 
+	private String phone; 
+	private String mm; 
+	private String yy;
+	private String cvv; 
+	private String amount;
+	
+}

@@ -1,0 +1,5 @@
+package com.bellinfo.flights.dao.cars;
+
+public class Car {
+
+}

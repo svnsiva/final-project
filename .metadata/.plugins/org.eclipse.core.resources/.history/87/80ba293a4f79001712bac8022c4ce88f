@@ -1,0 +1,25 @@
+package com.bellinfo.flights.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bellinfo.flights.dao.cars.Car;
+import com.bellinfo.flights.dao.cars.CarTest;
+
+@Controller
+public class CarController {
+	@RequestMapping(value="/cars",method=RequestMethod.GET)
+	public String postStudentData(Model model){
+		CarTest ct = new CarTest();
+		ct.enteringCarData();
+		List list = ct.gettingCarData();
+		for(int i=0;i<list.size();i++)
+			System.out.println(list.get(i).toString());
+		model.addAttribute("list",list);
+		return "car-results";
+	}
+}

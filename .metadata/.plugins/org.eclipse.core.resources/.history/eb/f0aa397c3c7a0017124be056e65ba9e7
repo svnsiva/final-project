@@ -1,0 +1,87 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<style>
+body{
+/* background:url("http://kennethsurat.com/wp-content/uploads/2014/12/EXPLORE-DREAM-DISCOVER.jpg"); */
+background-repeat:no-repeat;
+background-size:cover;
+}
+.cen{
+
+float:left;
+
+}
+
+</style>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Reservations</a>
+    </div>
+    
+    <ul class="nav navbar-nav navbar-right">
+    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+ <div class="media">
+    <div class="media-left">
+     <!--  <img style="margin-left: 50px;" src="https://www.citizenpass.io/themes/citizen-pass/img/process-login.png" class="media-object" > -->
+    </div>
+    <div class="media-body text-center">
+      <div><br>
+      <div>
+    <form class="form" action="${pageContext.request.contextPath}/search" method="get">
+   <div class="cen">
+    <label for="name">Start exploring USA:</label>
+    
+	<button type="submit" class="btn btn-succesbtn-lg">Search Flights</button>
+	</div>
+	</form>
+	</div> 
+      
+   <br><br>		
+   <form class="form" action="${pageContext.request.contextPath}/cars" method="get">
+	<div>
+    <label for="name">Start exploring your city</label>
+	<button type="submit" class="btn btn-primary btn-lg">Search Cars</button>
+	</div></form>
+	<br><br><br>
+    <div>
+    <label for="name">Previous Reservation</label>
+    <form class="form-horizontal" action="${pageContext.request.contextPath}/carbills" method="get">
+    
+	<button type="submit" class="btn btn-primary btn-lg">Car Bills</button>
+	
+	</form>
+	<br><br>	
+	<form class="form-horizontal" action="${pageContext.request.contextPath}/flightbills" method="get">
+    
+	<button type="submit" class="btn btn-primary btn-lg">Flight Bills</button>
+	
+	</form>
+	</div>  
+      </div>
+    </div>
+    </div>
+  </div> 
+
+</body>
+</html>

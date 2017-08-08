@@ -1,0 +1,35 @@
+package com.bellinfo.flights.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bellinfo.flights.dao.bills.CarBills;
+import com.bellinfo.flights.dao.bills.CarBillsSave;
+import com.bellinfo.flights.dao.bills.FlightBills;
+import com.bellinfo.flights.dao.bills.FlightBillsSave;
+
+
+@Controller
+public class PaymentController {
+	
+	@RequestMapping(value="/payment", method=RequestMethod.POST)
+	public String bills(@ModelAttribute CarBills cb,Model model){
+		
+		CarBillsSave cbs = new CarBillsSave();
+		FlightBillsSave fbs  = new FlightBillsSave();
+		System.out.println(cb.toString());
+		if(cb.getAmount().contains("Car"))
+			cbs.save(cb);
+		else{
+			FlightBills fb = new FlightBills();
+			fb.setCb(cb);
+			
+			fbs.save(fb);
+		}
+		
+		return null;
+	}
+}

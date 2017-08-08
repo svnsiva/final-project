@@ -1,0 +1,29 @@
+package com.bellinfo.flights.init;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.UrlBasedViewResolver;
+
+@Configuration
+@ComponentScan(value="com.bellinfo.flights")
+@EnableWebMvc
+@PropertySource(value="classpath:message.properties")
+public class AppConfig {
+	@Autowired
+	Environment env;
+	
+	@Bean
+	public UrlBasedViewResolver urlBasedViewResolver(){
+		UrlBasedViewResolver viewResolver = new UrlBasedViewResolver();
+		viewResolver.setPrefix("/WEB-INF/pages/");
+		viewResolver.setSuffix(".jsp");
+		viewResolver.setViewClass(JstlView.class);
+		return viewResolver;
+	}
+}

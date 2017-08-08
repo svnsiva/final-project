@@ -1,0 +1,37 @@
+package com.bellinfo.flights.dao.bills;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bellinfo.flights.controller.LoginController;
+import com.bellinfo.flights.dao.flights.AccountDetails;
+
+
+public class CarBillsSave {
+	public void save(CarBills cb){
+		Configuration cfg = new Configuration().configure().addAnnotatedClass(AccountDetails.class)
+				.addAnnotatedClass(CarBills.class).addAnnotatedClass(FlightBills.class);
+	    SessionFactory sf = cfg.buildSessionFactory();
+	    Session session = sf.openSession();
+	    Transaction transaction = session.beginTransaction();
+	    Query query = session.createQuery("from AccountDetails ");
+	    List list = query.list();
+	    AccountDetails ad;
+	    for(int i=0;i<list.size();i++){
+	    	
+	    	if((AccountDetails) list.get(i)==LoginController.logedAd){
+	    		ad=(AccountDetails) list.get(i);
+	    		
+	    	}
+	    }
+	    session.save(cb);
+	    transaction.commit();
+	    session.close();
+		
+	}
+}

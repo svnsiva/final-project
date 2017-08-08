@@ -1,0 +1,71 @@
+package com.bellinfo.flights.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.bellinfo.flights.dao.flights.AccountDetails;
+import com.bellinfo.flights.model.AirportLocations;
+import com.bellinfo.flights.model.FlightDetails;
+import com.bellinfo.flights.model.FlightSearch;
+
+@Controller
+public class SearchController {
+	public static List<FlightDetails> list2;
+	@RequestMapping(value="/search", method=RequestMethod.GET)
+	public String studentdata(Model model){
+		
+		return "search";
+	}
+	
+	@RequestMapping(value="/book", method=RequestMethod.POST)
+	public String studentdata3(@RequestParam String got, Model model){
+		FlightDetails fd = null;
+		for(int i=0;i<list2.size();i++){
+			if(got.equalsIgnoreCase(list2.get(i).getId())){
+				fd=list2.get(i);
+			}
+			
+		}
+		model.addAttribute("cost", fd.getCost());
+		model.addAttribute("reason", "Flight Ticket -"+fd.getCost());
+		return "payment";
+	}
+	
+	@RequestMapping(value="/search", method=RequestMethod.POST)
+	public String studentdata2(@RequestParam String origin,String dest,String depart,String reverse,String adult,
+			String child,Model model){
+		System.out.println(origin+dest+depart+reverse+adult+child);
+		FlightSearch fs = new FlightSearch();
+		List<FlightDetails> list = FlightSearch.search(origin, dest, depart);
+		list2=list;
+		int minimum = list.get(0).getDistance();
+		List<FlightDetails> listSend =new ArrayList<FlightDetails>();
+		for(int i=0;i<list.size();i++){
+			if(list.get(i).getDistance()<minimum)
+				minimum=list.get(i).getDistance();
+		}
+		for(int i=0;i<list.size();i++){
+			if(minimum==list.get(i).getDistance())
+				listSend.add(list.get(i));
+		}
+		model.addAttribute("list", listSend);
+		AirportLocations al = new AirportLocations();
+		model.addAttribute("fd", new FlightDetails());
+		model.addAttribute("origin",al.search(origin));
+		model.addAttribute("dest",al.search(dest));
+		model.addAttribute("depart", depart);
+		return "flight-results";
+	}
+	
+
+}

@@ -1,0 +1,20 @@
+package com.bellinfo.flights.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bellinfo.flights.dao.bills.CarBills;
+
+
+@Controller
+public class Payment {
+	
+	@RequestMapping(value="/payment", method=RequestMethod.POST)
+	public String bills(@ModelAttribute CarBills cb,Model model){
+		System.out.println(cb.toString());
+		return null;
+	}
+}

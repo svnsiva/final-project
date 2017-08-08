@@ -1,0 +1,5 @@
+package com.bellinfo.flights.model;
+
+public class FlightDetails {
+
+}

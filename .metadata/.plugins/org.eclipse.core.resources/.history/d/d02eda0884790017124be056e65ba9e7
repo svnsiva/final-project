@@ -1,0 +1,18 @@
+package com.bellinfo.flights.dao.bills;
+
+
+
+
+public class CarBills {
+private String cardName;
+private String cardNumber; 
+private String phoneNumber; 
+private String expDate; 
+private String cvv; 
+private String amount; 
+
+	
+	
+	
+	
+}

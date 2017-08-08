@@ -1,0 +1,17 @@
+package com.svnsiva.hibernatepractise;
+
+
+public class AssociationTest {
+	public static void main(String[] args) {
+		Parts part1 = new Parts();
+			part1.setPartId("1");
+			part1.setPartName("Monitor");
+		Parts part2 = new Parts();
+		part1.setPartId("2");
+		part1.setPartName("Keyboard");
+		Parts part3 = new Parts();
+		part1.setPartId("3");
+		part1.setPartName("Mouse");
+	}
+
+}
