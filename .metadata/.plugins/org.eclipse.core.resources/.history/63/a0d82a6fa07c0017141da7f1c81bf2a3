@@ -38,7 +38,7 @@ public class CarController {
 			cr=(Car) list2.get(0);
 		else if(car.equals("car2"))
 			cr=(Car) list2.get(1);
-		else if(car.equals("car3"))
+		else if(car.equalghs("car3"))
 			cr=(Car) list2.get(2);
 		else 
 			cr=(Car) list2.get(3);

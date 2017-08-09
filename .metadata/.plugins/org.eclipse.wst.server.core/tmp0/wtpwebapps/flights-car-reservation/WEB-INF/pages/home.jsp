@@ -26,7 +26,7 @@ crossorigin="anonymous">
 </nav>
 <div class="wrapper">
     
-     <a href="/Hospital-portal/HospRegister.jsp" button type="button" class="btn btn-success">Start Exploring</a></button>
+     <a href="/Hospital-portal/HospRegister.jsp;[]" button type="button" class="btn btn-success">Start Exploring</a></button>
  
 </div>
 <style>

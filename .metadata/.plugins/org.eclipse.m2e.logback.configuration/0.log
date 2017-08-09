@@ -4289,3 +4289,11 @@
 2017-08-06 22:58:18,622 [Worker-567] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
 2017-08-06 22:58:18,624 [Worker-567] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-08-06 22:58:18,628 [Worker-567] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\career\bell Info\final project\flights-car-reservation\src\test\resources
+2017-08-08 21:16:41,300 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-08 21:16:41,331 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-08-08 21:16:41,347 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-08 21:16:41,347 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\career\bell Info\final project\flights-car-reservation\src\test\resources
+2017-08-08 21:16:56,310 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-08 21:16:56,331 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-08-08 21:16:56,331 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-08 21:16:56,331 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\career\bell Info\final project\flights-car-reservation\src\test\resources

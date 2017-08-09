@@ -1,0 +1,6 @@
+127.0.0.1 - - [08/Aug/2017:21:17:19 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [08/Aug/2017:21:17:21 -0400] "GET /flights-car-reservation/ HTTP/1.1" 200 1494
+0:0:0:0:0:0:0:1 - - [08/Aug/2017:21:17:24 -0400] "GET /flights-car-reservation/login HTTP/1.1" 200 5911
+0:0:0:0:0:0:0:1 - - [08/Aug/2017:21:17:33 -0400] "POST /flights-car-reservation/login HTTP/1.1" 200 5862
+0:0:0:0:0:0:0:1 - - [08/Aug/2017:21:18:30 -0400] "GET /flights-car-reservation/login HTTP/1.1" 200 5911
+0:0:0:0:0:0:0:1 - - [08/Aug/2017:21:18:36 -0400] "POST /flights-car-reservation/login HTTP/1.1" 200 5862
