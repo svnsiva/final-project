@@ -246,6 +246,9 @@ form.login a:hover
                         </div>
                     </div>
                 </div>
+                <div>
+                	<h3 class="danger">${message }</h3>
+                </div>
                 </form>
             </div>
         </div>

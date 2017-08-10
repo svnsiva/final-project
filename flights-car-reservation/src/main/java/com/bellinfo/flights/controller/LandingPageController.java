@@ -14,12 +14,14 @@ public class LandingPageController {
 	public String landingPage(Model model){
 		AccountDetails ac = new AccountDetails();
 		model.addAttribute(ac);
+		model.addAttribute("message", "");
 		return "home";
 	}
 	@RequestMapping(value="/index",method=RequestMethod.GET)
 	public String indexPage(Model model){
 		AccountDetails ac = new AccountDetails();
 		model.addAttribute(ac);		
+		model.addAttribute("message", "");
 		return "home";
 	}
 	

@@ -115,6 +115,11 @@ a:hover{text-decoration:none}
 color:white;
      font-size:15px;
 }
+body {	
+    background-color: #eee;
+    background:url("https://cn.best-wallpaper.net/wallpaper/1600x900/1309/A380-aircraft-flying-in-the-sky-clouds-blue_1600x900.jpg");
+}
+
 .bt{
 
 text-align:center;
@@ -132,9 +137,9 @@ text-align:center;
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	  <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/account"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
     </ul>
   </div>
 </nav>
@@ -156,8 +161,8 @@ text-align:center;
 								<div class="triptype">
 								
 								
-											<label class="rndTrip"><input type="radio" name="Round" value="RoundTrip" > Round Trip</label>
-											<label class="oneTrip active"><input type="radio" name="Round" value="OneWay" checked> OneWay</label>
+											<label class="rndTrip "><input type="radio" name="Round" value="RoundTrip" ><a href="${pageContext.request.contextPath}/two-way">Round Trip</a> </label>
+											<label class="oneTrip active"><input type="radio" name="Round" value="OneWay" checked> <a href="${pageContext.request.contextPath}/search">OneWay</a></label>
 										</div>
 										<div class="select-wrap prefered-airline">
 											<div class="adult-box">
@@ -216,6 +221,7 @@ text-align:center;
 											<div class="adult-box">
 												<span>Adult</span>
 												<select name="adult">
+													<option value="0">0</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">2</option>
@@ -227,6 +233,7 @@ text-align:center;
 											<div class="adult-box">
 												<span>Child</span>
 												<select name="child">
+													<option value="0">0</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">2</option>

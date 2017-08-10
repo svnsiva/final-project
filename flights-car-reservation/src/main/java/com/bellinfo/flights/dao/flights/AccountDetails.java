@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import com.bellinfo.flights.dao.bills.CarBills;
 import com.bellinfo.flights.dao.bills.FlightBills;
@@ -18,11 +20,11 @@ public class AccountDetails {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	
+	@NotNull
 	private String firstname;
-	
+	@NotNull
 	private String lastName;
-
+	@Min(value=12)
 	private int age;
 	
 	private String email;

@@ -11,6 +11,15 @@ public class FlightDetails {
 	private int distance;
 	private String airline;
 	private String cost;
+	private String roundtrip;
+	public String getRoundtrip() {
+		return roundtrip;
+	}
+	public void setRoundtrip(String roundtrip) {
+		this.roundtrip = roundtrip;
+	}
+	
+	
 	private int duration; 
 	private String departTime;
 	private String arrivalTime;

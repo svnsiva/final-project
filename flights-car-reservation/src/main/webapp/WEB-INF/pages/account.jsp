@@ -16,6 +16,13 @@
 <body>
 	
 <style>
+
+
+body{
+
+background:white;
+
+}
 .thumbnail
 {
     margin-bottom: 40px;
@@ -41,40 +48,25 @@
 {
     margin-right: 10px;
 }
-.item.list-group-item .thumbnail
-{
-    margin-bottom: 0px;
-}
-.item.list-group-item .caption
-{
-    padding: 9px 9px 0px 9px;
-}
-.item.list-group-item:nth-of-type(odd)
-{
-    background: #eeeeee;
-}
-
-.item.list-group-item:before, .item.list-group-item:after
-{
-    display: table;
-    content: " ";
-}
-
-.item.list-group-item img
-{
-    float: left;
-}
-.item.list-group-item:after
-{
-    clear: both;
-}
-.list-group-item-text
 
 
-.wrap{
 
-    
+.item img{
+	
+	display:inline-block; 	
+  
+
 }
+
+.item
+{
+text-align:center;
+display: inline-block;     /* arranging the div elements-->*/
+  margin: 0px 2% 5rem 2%;
+  width: 45%;
+  position:relative;
+  overflow:hidden;  /* setting responsive design */
+  }
 </style>
 
 <nav class="navbar navbar-inverse">
@@ -84,9 +76,8 @@
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-       <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
     </ul>
   </div>
 </nav>
@@ -94,9 +85,9 @@
 <div class="container">
     <br><br>
     <div id="products" class="row list-group">
-        <div class="item  col-lg-6 col-lg-3">
+        <div class="item">
             <div class="thumbnail">
-                <img src="http://www.arppartners.com/eng/images/ethiad.jpg" alt="" />
+                <img src="http://www.arppartners.com/eng/images/ethiad.jpg" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         Explore USA</h4>
@@ -107,8 +98,7 @@
   
     <label for="name"></label>
     
- 
-                        <div class="col-xs-12 col-md-6">
+ <div class="wrap">
                              <button type="submit" class="btn btn-success btn-lg">Search Flights</button>
                         </div>
                         </form>
@@ -116,17 +106,16 @@
                 </div>
             </div>
         </div>
-        <div class="item  col-lg-6 col-lg-3">
+        <div class="item">
             <div class="thumbnail">
-                <img src="http://www.hdcarwallpapers.com/walls/bmw_6_series_2018-HD.jpg" alt="" />
+                <img src="http://www.hdcarwallpapers.com/walls/bmw_4_series_gran_coupe_m3-HD.jpg"/>
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         Search Cars</h4>
                     <p class="group inner list-group-item-text">
                      Find cars with the cheapest prices around </p>
                     <div class="row">
-
-                    <form class="form" action="${pageContext.request.contextPath}/cars" method="get">
+ <form class="form" action="${pageContext.request.contextPath}/cars" method="get">
   
     <label for="name"></label>
     <br>
@@ -140,9 +129,9 @@
                 </div>
             </div>
         </div>
-        <div class="item  col-lg-6 col-lg-3">
+        <div class="item">
             <div class="thumbnail">
-                <img src="https://fthmb.tqn.com/oq7X6EFyCgjY-47vgZSIBUTZYlw=/768x0/filters:no_upscale()/about/bills-57d1a3d83df78c71b633a31d.png" height=20px widht=20px alt="" />
+                <img src="https://fthmb.tqn.com/oq7X6EFyCgjY-47vgZSIBUTZYlw=/768x0/filters:no_upscale()/about/bills-57d1a3d83df78c71b633a31d.png"/>
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         Car Bills</h4>
@@ -161,16 +150,16 @@
             </div>
         </div>
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item">
             <div class="thumbnail">
-                <img class="group list-group-image" src="https://fthmb.tqn.com/oq7X6EFyCgjY-47vgZSIBUTZYlw=/768x0/filters:no_upscale()/about/bills-57d1a3d83df78c71b633a31d.png" alt="" />
+                <img src="https://fthmb.tqn.com/oq7X6EFyCgjY-47vgZSIBUTZYlw=/768x0/filters:no_upscale()/about/bills-57d1a3d83df78c71b633a31d.png"/>
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         Flight Bills</h4>
 
 
                     <p class="group inner list-group-item-text">
-                    View Your Previous Billings of Flight Tickets
+                    View Previous Billings of Flight Tickets
                      </p>
                      <br>
 

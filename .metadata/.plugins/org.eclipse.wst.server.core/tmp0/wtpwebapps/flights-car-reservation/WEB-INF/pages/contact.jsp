@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
 crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
 <title>Insert title here</title>
 <style type="text/css">
 /*Contact sectiom*/
@@ -73,26 +77,12 @@ textarea.form-control {
 </style>
 </head>
 <body>
-<form action="/account" method="POST" modelAttribute="account">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">Reservations</a>
-    </div>
+<form action="${pageContext.request.contextPath}/contact" method="post">
+
     
-    <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/nikhil">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
-   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
-   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  
 <section id="contact">
 			<div class="section-content">
+				<h2 class="bg-primary">${message }</h2>
 				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
 				<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
 			</div>
@@ -102,25 +92,25 @@ textarea.form-control {
 					<div class="col-md-6 form-line">
 			  			<div class="form-group">
 			  				<label for="exampleInputUsername">Your name</label>
-					    	<input type="text" class="form-control" id="" placeholder=" Enter Name">
+					    	<input type="text" name="name" class="form-control" id="" placeholder=" Enter Name">
 				  		</div>
 				  		<div class="form-group">
 					    	<label for="exampleInputEmail">Email Address</label>
-					    	<input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+					    	<input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
 					  	</div>	
 					  	<div class="form-group">
 					    	<label for="telephone">Mobile No.</label>
-					    	<input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
+					    	<input type="tel" name="number" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
 			  			</div>
 			  		</div>
 			  		<div class="col-md-6">
 			  			<div class="form-group">
 			  				<label for ="description"> Message</label>
-			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+			  			 	<textarea  class="form-control" name="messageText" id="description" placeholder="Enter Your Message"></textarea>
 			  			</div>
 			  			<div>
 
-			  				<button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+			  				<button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
 			  			</div>
 			  			
 					</div>

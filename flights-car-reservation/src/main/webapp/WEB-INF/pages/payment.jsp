@@ -27,9 +27,9 @@ background-repeat:no-repeat;
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	 <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/account"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
     </ul>
   </div>
 </nav>

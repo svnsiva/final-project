@@ -87,9 +87,9 @@ float: center;
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	  <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/account"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
     </ul>
   </div>
 </nav>
@@ -110,9 +110,9 @@ float: center;
 							<th>E-mail Id</th>
 							<th>Contact Number</th>
 							<th>Origin</th>
-							<th>Arrival Time</th>
+							
 							<th>Destination</th>
-							<th>Departure time</th>
+							<th>Round Trip</th>
 							<th>No of Passengers</th>
 							<th>Amount</th>
                             
@@ -128,10 +128,8 @@ float: center;
 							<td>${ad.getEmail() }</td>
 							<td>${item.getPhone() }</td>
 							<td>${item.getFd().getOrigin() }</td>
-							<td>${item.getFd().getDepartTime() }</td>
 							<td>${item.getFd().getDestination() }</td>
-							<td>${item.getFd().getArrivalTime() }</td>
-                            
+                            <td>${item.getFd().getRoundtrip() }</td>
                             <td>${item.getFd().getAdults() }</td>
                             <td>${item.getAmount() }</td>
 						</tr>

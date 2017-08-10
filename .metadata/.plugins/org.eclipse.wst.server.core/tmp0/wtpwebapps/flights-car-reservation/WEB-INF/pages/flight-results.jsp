@@ -19,17 +19,21 @@
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	  <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/account"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
+<div class="panel panel-primary">
+	<div class="panel-heading"><h2 class="text-center">Flight results - One way</h2></div>
+	<div class="panel-body">
 <c:forEach items = "${list}" var="item">
 <form action="${pageContext.request.contextPath}/book" method="post">
 <div class="panel panel-default">
+
     <div class="panel-heading"><p class="text-left">${origin} - ${dest}</p><p class="text-right"> ${item.getCost()}</p></div>
     <div class="panel-body ">
     <p class="text-center">Date: ${depart}<br>
@@ -46,6 +50,7 @@
 </div></div>
 </form>
 </c:forEach>
+</div></div>
 
 </div>
 </body>

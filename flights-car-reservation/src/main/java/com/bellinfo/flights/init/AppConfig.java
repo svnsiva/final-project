@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 @Configuration
-@ComponentScan(value="com.bellinfo.flights.init,com.bellinfo.flights.controller")
+@ComponentScan(value="com.bellinfo.flights")
 @EnableWebMvc
 @PropertySource(value="classpath:message.properties")
 public class AppConfig {

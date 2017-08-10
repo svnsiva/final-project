@@ -18,7 +18,7 @@ crossorigin="anonymous">
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
+    	 <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
       <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
    <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
@@ -26,7 +26,7 @@ crossorigin="anonymous">
 </nav>
 <div class="wrapper">
     
-     <a href="/Hospital-portal/HospRegister.jsp;[]" button type="button" class="btn btn-success">Start Exploring</a></button>
+     <h1>${message }</h1>
  
 </div>
 <style>

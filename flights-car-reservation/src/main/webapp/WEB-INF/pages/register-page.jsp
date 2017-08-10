@@ -31,7 +31,7 @@ body {
 <style>
 body {	
     background-color: #eee;
-    background:url("https://buidln.clipdealer.com/002/494/500//previews/3--2494500-Montage%20of%20doctors%20working%20with%20elderly%20patients.jpg");
+    background:url("https://i.ytimg.com/vi/3kkSEeh-kOQ/maxresdefault.jpg");
 }
 *[role="form"] {
     width: 200px;
@@ -54,9 +54,9 @@ body {
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-    	 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-      <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	  <li><a href="${pageContext.request.contextPath}/contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+      
+   <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Log-in</a></li>
     </ul>
   </div>
 </nav>
@@ -77,11 +77,11 @@ body {
 							<div class="col-sm-6 form-group">
 								<label>First Name</label>
 								
-							<form:input type="text" placeholder="Enter Your First Name.." class="form-control" path="firstname"></form:input>
+							<form:input  placeholder="Enter Your First Name.." class="form-control" path="firstname"></form:input>
 							</div>
 							<div class="col-sm-6 form-group">
 								<label>Last Name</label>
-								<form:input type="text" placeholder="Enter Your Last Name.." class="form-control" path="lastName"></form:input>
+								<form:input placeholder="Enter Your Last Name.." class="form-control" path="lastName"></form:input>
 							</div>
 							<div class="col-sm-6 form-group">
 								<label>Age</label>
